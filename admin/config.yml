@@ -1,0 +1,29 @@
+backend:
+  name: git-gateway
+  branch: main  # Ensure this matches your Git branch
+
+media_folder: "static/images"  # Folder to upload media files
+public_folder: "/images"  # URL path to access media files
+
+collections:
+  - name: "pages"
+    label: "Pages"
+    files:
+      - file: "content/home.md"
+        label: "Home Page"
+        name: "home"
+        fields:
+          - { label: "Title", name: "title", widget: "string" }
+          - { label: "About Us Content", name: "about_us", widget: "markdown" }
+          - { label: "Instagram Content", name: "instagram_content", widget: "markdown" }
+          - { label: "Contact Information", name: "contact_info", widget: "markdown" }
+
+  - name: "gallery"
+    label: "Gallery"
+    folder: "content/gallery"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Image", name: "image", widget: "image" }
+      - { label: "Description", name: "description", widget: "text" }
