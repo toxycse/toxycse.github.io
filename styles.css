@@ -1,0 +1,218 @@
+/* General Body Styles */
+body {
+    font-family: Arial, sans-serif; /* Default font for the whole body */
+    margin: 0;
+    padding: 0;
+    background-color: #ffffff;
+    color: #000000;
+    overflow-x: hidden;
+}
+
+/* Header Section */
+header {
+    background-color: #ffffff; /* White background */
+    color: #FFA500; /* Orange text */
+    padding: 20px;
+    text-align: center;
+    animation: slideIn 1s ease-out;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.5em;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: #FFA500; /* Orange text for navigation links */
+    text-decoration: none;
+    font-size: 1.2em;
+    font-family: 'Verdana, Geneva, sans-serif'; /* Font for navigation links */
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #000000; /* Change to black on hover */
+}
+
+
+/* Hero Section */
+.hero {
+    background-color: #FFA500;
+    color: #000000;
+    padding: 100px 20px;
+    text-align: center;
+    animation: fadeIn 2s ease-in;
+}
+
+.hero-content {
+    max-width: 800px;
+    margin: 0 auto;
+    animation: scaleUp 1.5s ease-in-out;
+}
+
+.hero h2 {
+    font-size: 3em;
+    margin-bottom: 20px;
+    transition: transform 0.3s, color 0.3s;
+}
+
+.hero h2:hover {
+    transform: scale(1.1);
+    color: #ffffff;
+}
+
+.hero h2:hover .highlight {
+    color: #ffffff;
+}
+
+.hero p {
+    font-size: 1.5em;
+    font-family: 'Verdana, Geneva, sans-serif'; /* Font for hero section small text */
+    margin-bottom: 40px;
+}
+
+.btn {
+    background-color: #000000;
+    color: #FFA500;
+    padding: 10px 20px;
+    text-decoration: none;
+    font-size: 1.2em;
+    border-radius: 5px;
+    font-family: 'Verdana, Geneva, sans-serif'; /* Font for buttons */
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.btn:hover {
+    background-color: #FFA500;
+    color: #000000;
+    transform: scale(1.1);
+}
+
+/* About Us Section */
+#about {
+    background-color: #FFA500;
+    color: #ffffff;
+    padding: 50px 20px;
+    text-align: center;
+    animation: slideUp 1.5s ease-in;
+    font-family: 'Verdana, Geneva, sans-serif'; /* Font for About Us text */
+}
+
+#about h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+/* Gallery Section */
+#gallery {
+    background-color: #ffffff;
+    color: #000000;
+    padding: 50px 20px;
+    text-align: center;
+    animation: slideIn 1.5s ease-out;
+    font-family: 'Verdana, Geneva, sans-serif'; /* Font for Gallery text */
+}
+
+#gallery h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 10px;
+    animation: fadeIn 2s ease-in;
+}
+
+.gallery-grid img {
+    width: 100%;
+    border-radius: 10px;
+    transition: transform 0.3s;
+}
+
+.gallery-grid img:hover {
+    transform: scale(1.05);
+}
+
+/* Instagram Section */
+#instagram {
+    background-color: #000000;
+    color: #FFA500;
+    padding: 50px 20px;
+    text-align: center;
+    animation: fadeIn 2s ease-in;
+    font-family: 'Verdana, Geneva, sans-serif'; /* Font for Instagram text */
+}
+
+#instagram h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+/* Footer Section */
+footer {
+    background-color: #FFA500;
+    color: #ffffff;
+    text-align: center;
+    padding: 20px;
+    animation: slideUp 1s ease-out;
+    font-family: 'Verdana, Geneva, sans-serif'; /* Font for Footer text */
+}
+
+footer p {
+    margin: 5px 0;
+}
+
+/* Animations */
+@keyframes slideIn {
+    from {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideUp {
+    from {
+        transform: translateY(100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes scaleUp {
+    from {
+        transform: scale(0.8);
+        opacity: 0;
+    }
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
