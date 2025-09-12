@@ -1,65 +1,75 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TOXY CSE</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TOXY CSE</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="scripts.js" defer></script>
 </head>
 <body>
-<!-- Header Section -->
-<header>
-  <h1>TOXY CSE</h1>
-  <!-- Logo Image -->
-  <img src="https://i.postimg.cc/9M2fYMcr/logo-toxy.png" width="200" height="200" alt="Toxy CSE" id="logo">
-  <nav>
+  <!-- Header -->
+  <header>
+    <div class="logo-container">
+      <img src="https://i.postimg.cc/9M2fYMcr/logo-toxy.png" alt="Toxy CSE" id="logo">
+      <h1>TOXY CSE</h1>
+    </div>
+    <nav>
       <ul>
-          <li><a href="#about">About Us</a></li>
-          <li><a href="#gallery">Gallery</a></li>
-          <li><a href="#instagram">Instagram</a></li>
-          <li><a href="#contact">Contact</a></li>
+        <li><a href="#about">About Us</a></li>
+        <li><a href="#gallery">Gallery</a></li>
+        <li><a href="#instagram">Instagram</a></li>
+        <li><a href="#contact">Contact</a></li>
       </ul>
-  </nav>
-</header>
+    </nav>
+  </header>
 
-
-    <section class="hero">
-      <div class="hero-content">
-          <h2>Welcome to <span class="highlight">TOXY CSE</span></h2>
-          <p>The boys from Toxy cse</p>
-          <a href="https://www.instagram.com/toxy.cse/" class="btn">Follow us on Instagram</a>
-      </div>
+  <!-- Hero (Parallax) -->
+  <section class="parallax hero" style="background-image: url('https://i.ibb.co/xfTvzK6/toxy.jpg');">
+    <div class="overlay"></div>
+    <div class="hero-content">
+      <h2>Welcome to <span class="highlight">TOXY CSE</span></h2>
+      <p>The boys from Toxy CSE</p>
+      <a href="https://www.instagram.com/toxy.cse/" class="btn">Follow us on Instagram</a>
+    </div>
   </section>
 
-    <!-- About Us Section -->
-    <section id="about">
-        <h2>About Us</h2>
-        <p>Department of CSE | 2022 - 2026 batch </p>
-    </section>
+  <!-- About -->
+  <section id="about" class="parallax" style="background-image: url('https://i.ibb.co/WyBmgM2/456574239-1006834264517911-8848268185205471032-n.jpg');">
+    <div class="overlay"></div>
+    <div class="content">
+      <h2>About Us</h2>
+      <p>Department of CSE | 2022 - 2026 batch</p>
+    </div>
+  </section>
 
-    <!-- Gallery Section -->
-    <section id="gallery">
-        <h2>Gallery</h2>
-        <div class="gallery-grid">
-            <!-- Add your images here -->
-            <img src="https://i.ibb.co/WyBmgM2/456574239-1006834264517911-8848268185205471032-n.jpg" alt="boys">
-            <img src="https://i.ibb.co/1XnQWtV/428970425-240976232413395-3054693785549047076-n.jpg" alt="boys">
-            <img src="https://i.ibb.co/xfTvzK6/toxy.jpg" alt="boys">
-            <img src="https://i.postimg.cc/W4jqpSxD/345924540-1481570369251024-7843852771591109727-n.jpg" alt="boys"
-            <img src="https://i.postimg.cc/htfk2v21/IMG-5059.jpg" alt="boys">
-            <img src="https://i.postimg.cc/d3RCPJnW/Whats-App-Image-2024-09-01-at-12-11-50-PM-1.jpg" alt="boys">
-            <img src="https://i.postimg.cc/rFLbSg4c/IMG-5035.jpg" alt="boys">
-            <img src="https://i.postimg.cc/1tmXnDKK/IMG-20230701-WA0009-2.jpg" alt="boys">
-            <!-- Add more images as needed -->
-        </div>
-    </section>
+  <!-- Gallery -->
+  <section id="gallery">
+    <h2>Gallery</h2>
+    <div class="gallery-grid">
+      <div class="card"><img src="https://i.ibb.co/WyBmgM2/456574239-1006834264517911-8848268185205471032-n.jpg" alt="Gallery 1"></div>
+      <div class="card"><img src="https://i.ibb.co/1XnQWtV/428970425-240976232413395-3054693785549047076-n.jpg" alt="Gallery 2"></div>
+      <div class="card"><img src="https://i.ibb.co/xfTvzK6/toxy.jpg" alt="Gallery 3"></div>
+      <div class="card"><img src="https://i.postimg.cc/W4jqpSxD/345924540-1481570369251024-7843852771591109727-n.jpg" alt="Gallery 4"></div>
+      <div class="card"><img src="https://i.postimg.cc/htfk2v21/IMG-5059.jpg" alt="Gallery 5"></div>
+      <div class="card"><img src="https://i.postimg.cc/d3RCPJnW/Whats-App-Image-2024-09-01-at-12-11-50-PM-1.jpg" alt="Gallery 6"></div>
+      <div class="card"><img src="https://i.postimg.cc/rFLbSg4c/IMG-5035.jpg" alt="Gallery 7"></div>
+      <div class="card"><img src="https://i.postimg.cc/1tmXnDKK/IMG-20230701-WA0009-2.jpg" alt="Gallery 8"></div>
+    </div>
+  </section>
 
-    <!-- Footer Section -->
-    <footer>
-        <p>&copy; 2024 Toxy CSE</p>
-        <p>Contact us: <a href="mailto:toxycse@gmail.com">toxycse@gmail.com</a></p>
-    </footer>
+  <!-- Contact -->
+  <section id="contact" class="parallax" style="background-image: url('https://i.postimg.cc/htfk2v21/IMG-5059.jpg');">
+    <div class="overlay"></div>
+    <div class="content">
+      <h2>Contact Us</h2>
+      <p>Email: <a href="mailto:toxycse@gmail.com">toxycse@gmail.com</a></p>
+    </div>
+  </section>
 
-    <script src="scripts.js"></script>
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2024 Toxy CSE</p>
+  </footer>
 </body>
 </html>
