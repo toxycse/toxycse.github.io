@@ -166,6 +166,10 @@ footer a {
   text-decoration: none;
 }
 
+.neil {
+  color: #ff9900;
+  font-weight: bold;
+}
 /* ===== Responsive ===== */
 @media (max-width: 600px) {
   header {
