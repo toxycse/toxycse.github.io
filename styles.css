@@ -30,6 +30,8 @@ header {
 #logo {
   height: 45px;
   width: auto;
+  border: #fff;
+  background-color: rgb(255, 255, 255);
 }
 
 header h1 {
@@ -37,6 +39,24 @@ header h1 {
   color: #ffa500;
   margin: 0;
 }
+
+.email {
+  display: inline-block;       /* allows padding and background */
+  color: #ffffff;
+  font-size: 16px;
+  text-decoration: none;
+  background-color: #cc8400;
+  border-radius: 5px;
+  padding: 8px 16px;           /* spacing inside */
+  font-weight: 500;
+  transition: background 0.3s;
+}
+
+.email:hover {
+  background-color: #000000;
+  color: white;   /* lighter on hover */
+}
+
 
 nav ul {
   list-style: none;
