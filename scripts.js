@@ -10,3 +10,11 @@ document.querySelectorAll(".card img").forEach(img => {
     e.target.style.transform = "scale(1)";
   });
 });
+
+// Background music autoplay on first click
+const music = document.getElementById("bg-music");
+document.addEventListener("click", () => {
+  if (music.paused) {
+    music.play().catch(err => console.log("Autoplay blocked:", err));
+  }
+}, { once: true });
