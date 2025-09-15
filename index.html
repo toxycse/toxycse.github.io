@@ -25,17 +25,17 @@
       background: rgba(0, 0, 0, 0.9);
       position: sticky;
       top: 0;
-      z-index: 1000;
+      z-index: 2000;
       flex-wrap: wrap;
       box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
-      animation: slideInHeader 1s ease-out;
+      animation: slideInHeader 0.8s ease-out;
     }
 
     .logo-container {
       display: flex;
       align-items: center;
       gap: 15px;
-      transform: translateZ(20px);
+      z-index: 2100;
     }
 
     #logo {
@@ -43,12 +43,12 @@
       width: auto;
       border-radius: 8px;
       background-color: #fff;
-      transition: transform 0.4s ease-in-out, box-shadow 0.4s ease-in-out;
+      transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
     }
 
     #logo:hover {
-      transform: scale(1.15) rotate(8deg);
-      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+      transform: scale(1.1) rotate(5deg);
+      box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
     }
 
     header h1 {
@@ -66,6 +66,7 @@
       padding: 0;
       flex-wrap: wrap;
       justify-content: center;
+      z-index: 2100;
     }
 
     nav ul li a {
@@ -74,11 +75,13 @@
       font-weight: 600;
       font-size: 1.1em;
       transition: color 0.3s ease-in-out, transform 0.3s ease-in-out;
+      position: relative;
+      z-index: 2100;
     }
 
     nav ul li a:hover {
       color: #fff;
-      transform: translateY(-3px) scale(1.05);
+      transform: translateY(-2px);
     }
 
     /* ===== Email Button ===== */
@@ -92,12 +95,13 @@
       padding: 10px 20px;
       font-weight: 600;
       transition: background 0.3s ease-in-out, transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+      z-index: 2100;
     }
 
     .email:hover {
       background: #cc8400;
-      transform: scale(1.05) translateZ(10px);
-      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+      transform: scale(1.05);
+      box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
     }
 
     /* ===== Parallax Sections ===== */
@@ -112,9 +116,8 @@
       justify-content: center;
       text-align: center;
       color: #fff;
-      transform-style: preserve-3d;
+      z-index: 1000;
       overflow: hidden;
-      transition: transform 0.6s ease-in-out;
     }
 
     @supports (-webkit-touch-callout: none) {
@@ -127,7 +130,8 @@
       position: absolute;
       inset: 0;
       background: rgba(0, 0, 0, 0.65);
-      transition: opacity 0.5s ease-in-out;
+      transition: opacity 0.4s ease-in-out;
+      z-index: 1100;
     }
 
     .parallax:hover .overlay {
@@ -137,11 +141,10 @@
     .parallax .content,
     .hero-content {
       position: relative;
-      z-index: 1;
+      z-index: 1200;
       padding: 30px;
-      transform: translateZ(30px);
       opacity: 0;
-      animation: fadeInContent 1.4s ease-out forwards;
+      animation: fadeInContent 1.2s ease-out forwards;
     }
 
     .parallax h2 {
@@ -149,27 +152,27 @@
       color: #ffa500;
       margin-bottom: 15px;
       text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
-      transition: transform 0.4s ease-in-out;
+      transition: transform 0.3s ease-in-out;
     }
 
     .parallax:hover h2 {
-      transform: scale(1.05);
+      transform: scale(1.03);
     }
 
     .parallax p {
       font-size: 1.2em;
       margin-bottom: 20px;
-      transition: transform 0.4s ease-in-out;
+      transition: transform 0.3s ease-in-out;
     }
 
     .parallax:hover p {
-      transform: translateY(-5px);
+      transform: translateY(-3px);
     }
 
     .highlight {
       color: #ffa500;
       font-weight: 700;
-      animation: glow 2s ease-in-out infinite;
+      animation: glow 1.8s ease-in-out infinite;
     }
 
     /* ===== Hero Button (Follow us on Instagram) ===== */
@@ -184,8 +187,9 @@
       margin-top: 20px;
       position: relative;
       overflow: hidden;
-      transition: background 0.4s ease-in-out, transform 0.4s ease-in-out, box-shadow 0.4s ease-in-out;
-      animation: pulseGlow 2s ease-in-out infinite;
+      z-index: 2100;
+      transition: background 0.3s ease-in-out, transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+      animation: pulseGlow 1.8s ease-in-out infinite;
     }
 
     .btn::before {
@@ -198,7 +202,8 @@
       background: rgba(255, 255, 255, 0.3);
       border-radius: 50%;
       transform: translate(-50%, -50%);
-      transition: width 0.5s ease-in-out, height 0.5s ease-in-out;
+      transition: width 0.4s ease-in-out, height 0.4s ease-in-out;
+      z-index: 2101;
     }
 
     .btn:hover::before {
@@ -208,8 +213,8 @@
 
     .btn:hover {
       background: #cc8400;
-      transform: scale(1.15) rotate(3deg) translateZ(15px);
-      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+      transform: scale(1.1) rotate(2deg);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
     }
 
     /* ===== Gallery ===== */
@@ -217,13 +222,14 @@
       background: #f5f5f5;
       padding: 80px 20px;
       text-align: center;
+      z-index: 1000;
     }
 
     #gallery h2 {
       font-size: 2.2em;
       color: #ffa500;
       margin-bottom: 40px;
-      animation: slideInUp 1s ease-out;
+      animation: slideInUp 0.8s ease-out;
     }
 
     .gallery-grid {
@@ -237,23 +243,22 @@
       background: #fff;
       border-radius: 10px;
       overflow: hidden;
-      transition: transform 0.6s ease-in-out;
+      transition: transform 0.5s ease-in-out;
       aspect-ratio: 4/3;
-      perspective: 1000px;
       position: relative;
-      transform-style: preserve-3d;
       box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+      z-index: 1100;
     }
 
     .card img {
       width: 100%;
       height: 100%;
       object-fit: cover;
-      transition: transform 0.6s ease-in-out;
+      transition: transform 0.5s ease-in-out;
     }
 
     .card:hover {
-      transform: rotateY(15deg) scale(1.05);
+      transform: scale(1.05);
     }
 
     .card::after {
@@ -262,7 +267,8 @@
       inset: 0;
       background: rgba(255, 165, 0, 0.3);
       opacity: 0;
-      transition: opacity 0.4s ease-in-out;
+      transition: opacity 0.3s ease-in-out;
+      z-index: 1101;
     }
 
     .card:hover::after {
@@ -276,13 +282,15 @@
       text-align: center;
       padding: 30px;
       box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.2);
-      animation: slideInUp 1s ease-out;
+      animation: slideInUp 0.8s ease-out;
+      z-index: 2000;
     }
 
     footer a {
       color: #ffa500;
       text-decoration: none;
       transition: color 0.3s ease-in-out, transform 0.3s ease-in-out;
+      z-index: 2100;
     }
 
     .neil {
@@ -310,11 +318,11 @@
     @keyframes fadeInContent {
       from {
         opacity: 0;
-        transform: translateY(30px) translateZ(0);
+        transform: translateY(20px);
       }
       to {
         opacity: 1;
-        transform: translateY(0) translateZ(30px);
+        transform: translateY(0);
       }
     }
 
@@ -334,16 +342,16 @@
         text-shadow: 0 0 5px rgba(255, 165, 0, 0.5);
       }
       50% {
-        text-shadow: 0 0 20px rgba(255, 165, 0, 1);
+        text-shadow: 0 0 15px rgba(255, 165, 0, 1);
       }
     }
 
     @keyframes pulseGlow {
       0%, 100% {
-        box-shadow: 0 0 10px rgba(255, 165, 0, 0.5);
+        box-shadow: 0 0 8px rgba(255, 165, 0, 0.5);
       }
       50% {
-        box-shadow: 0 0 20px rgba(255, 165, 0, 1);
+        box-shadow: 0 0 15px rgba(255, 165, 0, 1);
       }
     }
 
@@ -425,7 +433,7 @@
   </section>
 
   <!-- Background Music -->
-  <audio id="bg-music" loop>
+  <audio id="bg-music" loop autoplay>
     <source src="SHERIYA.mp3" type="audio/mpeg">
   </audio>
 
@@ -453,6 +461,12 @@
         const targetElement = document.querySelector(targetId);
         targetElement.scrollIntoView({ behavior: 'smooth', block: 'start' });
       });
+      anchor.addEventListener('touchstart', function(e) {
+        e.preventDefault();
+        const targetId = this.getAttribute('href');
+        const targetElement = document.querySelector(targetId);
+        targetElement.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      });
     });
 
     // Intersection Observer for Scroll Animations
@@ -468,6 +482,28 @@
     document.querySelectorAll('.parallax, .card').forEach(element => {
       element.style.animationPlayState = 'paused';
       observer.observe(element);
+    });
+
+    // Handle Background Music Autoplay
+    document.addEventListener('DOMContentLoaded', () => {
+      const audio = document.getElementById('bg-music');
+      audio.play().catch(error => {
+        console.error('Autoplay failed:', error);
+        // Attempt to play on user interaction with the page
+        document.addEventListener('click', () => {
+          audio.play().catch(err => console.error('Click-triggered play failed:', err));
+        }, { once: true });
+        document.addEventListener('touchstart', () => {
+          audio.play().catch(err => console.error('Touch-triggered play failed:', err));
+        }, { once: true });
+      });
+    });
+
+    // Ensure buttons are clickable
+    document.querySelectorAll('.btn, .email').forEach(button => {
+      button.addEventListener('touchstart', function(e) {
+        e.stopPropagation();
+      });
     });
   </script>
 </body>
