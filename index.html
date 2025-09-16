@@ -16,6 +16,34 @@
       perspective: 1000px;
     }
 
+    /* ===== Mute/Unmute Button ===== */
+    .music-control {
+      position: fixed;
+      top: 10px;
+      right: 20px;
+      z-index: 3000;
+      background: rgba(0, 0, 0, 0);
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+      transition: all 0.3s ease;
+    }
+
+    .music-control:hover {
+      transform: scale(1.1);
+      background: rgba(0, 0, 0, 0.9);
+    }
+
+    .music-control i {
+      color: #ffa500;
+      font-size: 10px;
+    }
+
     /* ===== Header ===== */
     header {
       display: flex;
@@ -379,10 +407,28 @@
       .gallery-grid {
         grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
       }
+      
+      .music-control {
+        top: 15px;
+        right: 15px;
+        width: 40px;
+        height: 40px;
+      }
+      
+      .music-control i {
+        font-size: 20px;
+      }
     }
   </style>
+  <!-- Font Awesome for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
+  <!-- Music Control Button -->
+  <div class="music-control" id="music-control">
+    <i class="fas fa-volume-up"></i>
+  </div>
+
   <!-- Header -->
   <header>
     <div class="logo-container">
@@ -399,7 +445,7 @@
   </header>
 
   <!-- Hero -->
-  <section class="parallax hero" style="background-image: url('https://e.top4top.io/p_3542t91rl0.jpg');">
+  <section class="parallax hero" style="background-image: url('https://i.ibb.co/fYNNkHYc/Whats-App-Image-2025-09-16-at-12-50-27-PM.jpg');">
     <div class="overlay"></div>
     <div class="hero-content">
       <h2>Welcome to <span class="highlight">TOXY CSE</span></h2>
@@ -448,11 +494,33 @@
 
   <!-- Footer -->
   <footer>
-    <span>DEVELOPED BY </span><a href="https://instagram.com/neilna7h" class="neil">NEIL</a>
-    <p>&copy; 2024 TOXY CSE</p>
+    <span>DEVELOPED BY </span><a href="https://instagram.com/neillnath" class="neil">NEIL</a>
+    <p>&copy; 2022 TOXY CSE</p>
   </footer>
 
   <script>
+    // Music Control Functionality
+    const musicControl = document.getElementById('music-control');
+    const audio = document.getElementById('bg-music');
+    let isMuted = false;
+    
+    // Set initial volume (not muted)
+    audio.volume = 0.7;
+    
+    musicControl.addEventListener('click', function() {
+      isMuted = !isMuted;
+      
+      if (isMuted) {
+        audio.volume = 0;
+        musicControl.innerHTML = '<i class="fas fa-volume-mute"></i>';
+        musicControl.title = "Unmute music";
+      } else {
+        audio.volume = 0.7;
+        musicControl.innerHTML = '<i class="fas fa-volume-up"></i>';
+        musicControl.title = "Mute music";
+      }
+    });
+
     // Smooth Scroll for Nav Links
     document.querySelectorAll('nav a').forEach(anchor => {
       anchor.addEventListener('click', function(e) {
@@ -486,7 +554,6 @@
 
     // Handle Background Music Autoplay
     document.addEventListener('DOMContentLoaded', () => {
-      const audio = document.getElementById('bg-music');
       audio.play().catch(error => {
         console.error('Autoplay failed:', error);
         // Attempt to play on user interaction with the page
@@ -508,4 +575,3 @@
   </script>
 </body>
 </html>
-
